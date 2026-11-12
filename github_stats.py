@@ -134,6 +134,7 @@ class Queries(object):
             direction: DESC
         }},
         isFork: false,
+        ownerAffiliations: OWNER,
         after: {"null" if owned_cursor is None else '"'+ owned_cursor +'"'}
     ) {{
       pageInfo {{
@@ -142,6 +143,7 @@ class Queries(object):
       }}
       nodes {{
         nameWithOwner
+        isArchived
         stargazers {{
           totalCount
         }}
@@ -166,6 +168,7 @@ class Queries(object):
         }},
         contributionTypes: [
             COMMIT,
+            ISSUE,
             PULL_REQUEST,
             REPOSITORY,
             PULL_REQUEST_REVIEW
@@ -178,6 +181,7 @@ class Queries(object):
       }}
       nodes {{
         nameWithOwner
+        isArchived
         stargazers {{
           totalCount
         }}
@@ -287,7 +291,7 @@ class Stats(object):
 Stargazers: {await self.stargazers:,}
 Forks: {await self.forks:,}
 All-time contributions: {await self.total_contributions:,}
-Repositories with contributions: {len(await self.repos)}
+Repositories: {len(await self.repos)}
 Lines of code added: {lines_changed[0]:,}
 Lines of code deleted: {lines_changed[1]:,}
 Lines of code changed: {lines_changed[0] + lines_changed[1]:,}
@@ -305,6 +309,7 @@ Languages:
         self._repos = set()
 
         exclude_langs_lower = {x.lower() for x in self._exclude_langs}
+        seen_lang_repos = set()
 
         next_owned = None
         next_contrib = None
@@ -333,30 +338,44 @@ Languages:
                 raw_results.get("data", {}).get("viewer", {}).get("repositories", {})
             )
 
-            repos = owned_repos.get("nodes", [])
-            if not self._ignore_forked_repos:
-                repos += contrib_repos.get("nodes", [])
+            owned_nodes = owned_repos.get("nodes", [])
+            contrib_nodes = contrib_repos.get("nodes", [])
 
-            for repo in repos:
-                if repo is None:
+            # Overview stats: owned non-fork repositories, plus contributed
+            # repositories only when forked repositories are not excluded.
+            overview_repos = owned_nodes
+            if not self._ignore_forked_repos:
+                overview_repos = owned_nodes + contrib_nodes
+
+            for repo in overview_repos:
+                if repo is None or repo.get("isArchived"):
                     continue
-                name = repo.get("nameWithOwner")
-                if name in self._repos or name in self._exclude_repos:
+                repo_name = repo.get("nameWithOwner")
+                if repo_name in self._repos or repo_name in self._exclude_repos:
                     continue
-                self._repos.add(name)
+                self._repos.add(repo_name)
                 self._stargazers += repo.get("stargazers").get("totalCount", 0)
                 self._forks += repo.get("forkCount", 0)
 
+            # Language stats: owned and contributed repositories. Archived
+            # repositories are excluded.
+            for repo in owned_nodes + contrib_nodes:
+                if repo is None or repo.get("isArchived"):
+                    continue
+                repo_name = repo.get("nameWithOwner")
+                if repo_name in seen_lang_repos or repo_name in self._exclude_repos:
+                    continue
+                seen_lang_repos.add(repo_name)
+
                 for lang in repo.get("languages", {}).get("edges", []):
-                    name = lang.get("node", {}).get("name", "Other")
-                    languages = await self.languages
-                    if name.lower() in exclude_langs_lower:
+                    lang_name = lang.get("node", {}).get("name", "Other")
+                    if lang_name.lower() in exclude_langs_lower:
                         continue
-                    if name in languages:
-                        languages[name]["size"] += lang.get("size", 0)
-                        languages[name]["occurrences"] += 1
+                    if lang_name in self._languages:
+                        self._languages[lang_name]["size"] += lang.get("size", 0)
+                        self._languages[lang_name]["occurrences"] += 1
                     else:
-                        languages[name] = {
+                        self._languages[lang_name] = {
                             "size": lang.get("size", 0),
                             "occurrences": 1,
                             "color": lang.get("node", {}).get("color"),

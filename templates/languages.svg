@@ -1,149 +1,36 @@
-<svg id="gh-dark-mode-only" width="360" height="210" xmlns="http://www.w3.org/2000/svg">
+<svg id="gh-dark-mode-only" width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lang-title lang-desc">
+<title id="lang-title">Languages by file size</title>
+<desc id="lang-desc">Languages by file size, ranked. The top eight languages are listed separately. The remaining languages are grouped as Other.</desc>
 <style>
-svg {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 14px;
-  line-height: 21px;
-}
-
-#background {
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  fill: white;
-  stroke: rgb(225, 228, 232);
-  stroke-width: 1px;
-  rx: 6px;
-  ry: 6px;
-}
-
-#gh-dark-mode-only:target #background {
-  fill: #0d1117;
-  stroke-width: 0.5px;
-}
-
-foreignObject {
-  width: calc(100% - 10px - 32px);
-  height: calc(100% - 10px - 24px);
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 0.75em;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(36, 41, 46);
-  fill: rgb(36, 41, 46);
-}
-
-#gh-dark-mode-only:target h2 {
-  color: #c9d1d9;
-  fill: #c9d1d9;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-li {
-  display: inline-flex;
-  font-size: 12px;
-  margin-right: 2ch;
-  align-items: center;
-  flex-wrap: nowrap;
-  transform: translateX(-500%);
-  animation: slideIn 2s ease-in-out forwards;
-}
-
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
-  }
-}
-
-div.ellipsis {
-  height: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.octicon {
-  fill: rgb(88, 96, 105);
-  margin-right: 0.5ch;
-  vertical-align: top;
-}
-
-#gh-dark-mode-only:target .octicon {
-  color: #8b949e;
-  fill: #8b949e;
-}
-
-.progress {
-  display: flex;
-  height: 8px;
-  overflow: hidden;
-  background-color: rgb(225, 228, 232);
-  border-radius: 6px;
-  outline: 1px solid transparent;
-  margin-bottom: 1em;
-}
-
-#gh-dark-mode-only:target .progress {
-  background-color: rgba(110, 118, 129, 0.4);
-}
-
-.progress-item {
-  outline: 2px solid rgb(225, 228, 232);
-  border-collapse: collapse;
-}
-
-#gh-dark-mode-only:target .progress-item {
-  outline: 2px solid #393f47;
-}
-
-.lang {
-  font-weight: 600;
-  margin-right: 4px;
-  color: rgb(36, 41, 46);
-}
-
-#gh-dark-mode-only:target .lang {
-  color: #c9d1d9;
-}
-
-.percent {
-  color: rgb(88, 96, 105)
-}
-
-#gh-dark-mode-only:target .percent {
-  color: #8b949e;
-}
+  .card { fill: #ffffff; stroke: #d0d7de; stroke-width: 1; }
+  #gh-dark-mode-only:target .card { fill: #0d1117; stroke: #30363d; }
+  .title, .name, .pct { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .title { font-size: 13px; line-height: 18px; font-weight: 600; color: #1f2328; }
+  #gh-dark-mode-only:target .title { color: #e6edf3; }
+  .rule { height: 1px; background: #d8dee4; margin: 8px 0; }
+  #gh-dark-mode-only:target .rule { background: #30363d; }
+  .rows { display: flex; flex-direction: column; }
+  .row { display: grid; grid-template-columns: 104px 1fr 42px; align-items: center; gap: 8px; height: 18px; }
+  .name { font-size: 12px; line-height: 16px; color: #1f2328; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #gh-dark-mode-only:target .name { color: #e6edf3; }
+  .track { height: 6px; background: #f6f8fa; border-radius: 3px; overflow: hidden; }
+  #gh-dark-mode-only:target .track { background: #21262d; }
+  .fill { display: block; height: 100%; background: #0969da; border-radius: 3px; }
+  #gh-dark-mode-only:target .fill { background: #58a6ff; }
+  .pct { font-size: 11px; line-height: 16px; color: #656d76; text-align: right; font-variant-numeric: tabular-nums; }
+  #gh-dark-mode-only:target .pct { color: #8b949e; }
+  .other .name, .other .pct { color: #656d76; }
+  #gh-dark-mode-only:target .other .name, #gh-dark-mode-only:target .other .pct { color: #8b949e; }
+  .other .fill { background: #8b949e; }
+  #gh-dark-mode-only:target .other .fill { background: #6e7681; }
 </style>
-<g>
-<rect x="5" y="5" id="background" />
-<g>
-<foreignObject x="21" y="17" width="318" height="176">
-<div xmlns="http://www.w3.org/1999/xhtml" class="ellipsis">
-
-<h2>Languages Used (By File Size)</h2>
-
-<div>
-<span class="progress">
-{{ progress }}
-</span>
-</div>
-
-<ul>
-
-{{ lang_list }}
-
-</ul>
-
-</div>
+<rect x="0.5" y="0.5" width="399" height="239" rx="6" class="card"/>
+<foreignObject x="20" y="20" width="360" height="200">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+    <div class="title">Languages by file size</div>
+    <div class="rule"></div>
+    <div class="rows">
+{{ lang_list }}    </div>
+  </div>
 </foreignObject>
-</g>
-</g>
 </svg>
