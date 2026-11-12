@@ -30,15 +30,15 @@
     <div class="title">Languages by file size</div>
     <div class="rule"></div>
     <div class="rows">
-<div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">98.3%</span></div>
-<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:0.5%"></span></span><span class="pct">0.5%</span></div>
-<div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:0.5%"></span></span><span class="pct">0.5%</span></div>
-<div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:0.2%"></span></span><span class="pct">0.2%</span></div>
-<div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:0.1%"></span></span><span class="pct">0.1%</span></div>
-<div class="row"><span class="name">Kotlin</span><span class="track"><span class="fill" style="width:0.1%"></span></span><span class="pct">0.1%</span></div>
-<div class="row"><span class="name">GDScript</span><span class="track"><span class="fill" style="width:0.1%"></span></span><span class="pct">0.1%</span></div>
-<div class="row"><span class="name">C</span><span class="track"><span class="fill" style="width:0.1%"></span></span><span class="pct">0.1%</span></div>
-<div class="row other"><span class="name">Other (29)</span><span class="track"><span class="fill" style="width:0.2%"></span></span><span class="pct">0.2%</span></div>
+<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">31.3%</span></div>
+<div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:90.1%"></span></span><span class="pct">28.2%</span></div>
+<div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:45.9%"></span></span><span class="pct">14.4%</span></div>
+<div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:28.5%"></span></span><span class="pct">8.9%</span></div>
+<div class="row"><span class="name">Kotlin</span><span class="track"><span class="fill" style="width:16.6%"></span></span><span class="pct">5.2%</span></div>
+<div class="row"><span class="name">GDScript</span><span class="track"><span class="fill" style="width:12.7%"></span></span><span class="pct">4.0%</span></div>
+<div class="row"><span class="name">C</span><span class="track"><span class="fill" style="width:10.1%"></span></span><span class="pct">3.2%</span></div>
+<div class="row"><span class="name">Svelte</span><span class="track"><span class="fill" style="width:4.7%"></span></span><span class="pct">1.5%</span></div>
+<div class="row other"><span class="name">Other (26)</span><span class="track"><span class="fill" style="width:10.9%"></span></span><span class="pct">3.4%</span></div>
     </div>
   </div>
 </foreignObject>
