@@ -133,7 +133,6 @@ class Queries(object):
             field: UPDATED_AT,
             direction: DESC
         }},
-        isFork: false,
         ownerAffiliations: OWNER,
         after: {"null" if owned_cursor is None else '"'+ owned_cursor +'"'}
     ) {{
@@ -144,6 +143,7 @@ class Queries(object):
       nodes {{
         nameWithOwner
         isArchived
+        isFork
         stargazers {{
           totalCount
         }}
@@ -182,6 +182,7 @@ class Queries(object):
       nodes {{
         nameWithOwner
         isArchived
+        isFork
         stargazers {{
           totalCount
         }}
@@ -348,7 +349,7 @@ Languages:
                 overview_repos = owned_nodes + contrib_nodes
 
             for repo in overview_repos:
-                if repo is None or repo.get("isArchived"):
+                if repo is None or repo.get("isArchived") or repo.get("isFork"):
                     continue
                 repo_name = repo.get("nameWithOwner")
                 if repo_name in self._repos or repo_name in self._exclude_repos:
@@ -358,7 +359,7 @@ Languages:
                 self._forks += repo.get("forkCount", 0)
 
             # Language stats: owned and contributed repositories. Archived
-            # repositories are excluded.
+            # repositories are excluded. Owned forks are included.
             for repo in owned_nodes + contrib_nodes:
                 if repo is None or repo.get("isArchived"):
                     continue
