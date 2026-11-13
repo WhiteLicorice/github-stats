@@ -30,9 +30,9 @@
     <div class="title">Languages by file size</div>
     <div class="rule"></div>
     <div class="rows">
-<div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">41.4%</span></div>
+<div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">41.3%</span></div>
 <div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:48.8%"></span></span><span class="pct">20.2%</span></div>
-<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:33.9%"></span></span><span class="pct">14.0%</span></div>
+<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:34.2%"></span></span><span class="pct">14.1%</span></div>
 <div class="row"><span class="name">Kotlin</span><span class="track"><span class="fill" style="width:20.2%"></span></span><span class="pct">8.4%</span></div>
 <div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:15.6%"></span></span><span class="pct">6.4%</span></div>
 <div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:8.2%"></span></span><span class="pct">3.4%</span></div>
