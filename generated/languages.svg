@@ -31,8 +31,8 @@
     <div class="rule"></div>
     <div class="rows">
 <div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">41.0%</span></div>
-<div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:48.8%"></span></span><span class="pct">20.0%</span></div>
-<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:34.5%"></span></span><span class="pct">14.1%</span></div>
+<div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:48.9%"></span></span><span class="pct">20.0%</span></div>
+<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:34.7%"></span></span><span class="pct">14.2%</span></div>
 <div class="row"><span class="name">Kotlin</span><span class="track"><span class="fill" style="width:20.2%"></span></span><span class="pct">8.3%</span></div>
 <div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:17.1%"></span></span><span class="pct">7.0%</span></div>
 <div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:8.3%"></span></span><span class="pct">3.4%</span></div>
