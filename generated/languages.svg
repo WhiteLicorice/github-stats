@@ -32,13 +32,13 @@
     <div class="rows">
 <div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">39.8%</span></div>
 <div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:49.0%"></span></span><span class="pct">19.5%</span></div>
-<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:35.4%"></span></span><span class="pct">14.1%</span></div>
+<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:35.6%"></span></span><span class="pct">14.2%</span></div>
 <div class="row"><span class="name">Kotlin</span><span class="track"><span class="fill" style="width:20.2%"></span></span><span class="pct">8.0%</span></div>
-<div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:17.2%"></span></span><span class="pct">6.9%</span></div>
+<div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:17.3%"></span></span><span class="pct">6.9%</span></div>
 <div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:8.3%"></span></span><span class="pct">3.3%</span></div>
 <div class="row"><span class="name">PLpgSQL</span><span class="track"><span class="fill" style="width:6.3%"></span></span><span class="pct">2.5%</span></div>
 <div class="row"><span class="name">C</span><span class="track"><span class="fill" style="width:3.7%"></span></span><span class="pct">1.5%</span></div>
-<div class="row other"><span class="name">Other (31)</span><span class="track"><span class="fill" style="width:10.8%"></span></span><span class="pct">4.3%</span></div>
+<div class="row other"><span class="name">Other (31)</span><span class="track"><span class="fill" style="width:10.9%"></span></span><span class="pct">4.3%</span></div>
     </div>
   </div>
 </foreignObject>
