@@ -30,12 +30,12 @@
     <div class="title">Languages by file size</div>
     <div class="rule"></div>
     <div class="rows">
-<div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">39.5%</span></div>
-<div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:49.6%"></span></span><span class="pct">19.6%</span></div>
-<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:36.4%"></span></span><span class="pct">14.4%</span></div>
+<div class="row"><span class="name">Assembly</span><span class="track"><span class="fill" style="width:100.0%"></span></span><span class="pct">39.4%</span></div>
+<div class="row"><span class="name">Rust</span><span class="track"><span class="fill" style="width:49.7%"></span></span><span class="pct">19.6%</span></div>
+<div class="row"><span class="name">Python</span><span class="track"><span class="fill" style="width:36.9%"></span></span><span class="pct">14.5%</span></div>
 <div class="row"><span class="name">Kotlin</span><span class="track"><span class="fill" style="width:20.2%"></span></span><span class="pct">8.0%</span></div>
-<div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:15.8%"></span></span><span class="pct">6.2%</span></div>
-<div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:9.3%"></span></span><span class="pct">3.7%</span></div>
+<div class="row"><span class="name">JavaScript</span><span class="track"><span class="fill" style="width:15.9%"></span></span><span class="pct">6.3%</span></div>
+<div class="row"><span class="name">TypeScript</span><span class="track"><span class="fill" style="width:9.5%"></span></span><span class="pct">3.7%</span></div>
 <div class="row"><span class="name">PLpgSQL</span><span class="track"><span class="fill" style="width:7.2%"></span></span><span class="pct">2.9%</span></div>
 <div class="row"><span class="name">C</span><span class="track"><span class="fill" style="width:3.7%"></span></span><span class="pct">1.4%</span></div>
 <div class="row other"><span class="name">Other (31)</span><span class="track"><span class="fill" style="width:10.9%"></span></span><span class="pct">4.3%</span></div>
